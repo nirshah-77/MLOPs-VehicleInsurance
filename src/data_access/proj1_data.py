@@ -47,8 +47,8 @@ class Proj1Data:
 
             # Convert collection data to DataFrame and preprocess
             print("Fetching data from mongoDB")
-            df = pd.DataFrame(list(collection.find({}, {"_id": 0}).limit(5)))
-            # df = pd.DataFrame(list(collection.find()))
+            # df = pd.DataFrame(list(collection.find({}, {"_id": 0}).limit(5)))
+            df = pd.DataFrame(list(collection.find()))
             # data = list(collection.find())
             # df = pd.DataFrame(data)
             # df = pd.DataFrame(list(collection.find()))
