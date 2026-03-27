@@ -20,7 +20,7 @@ class DataIngestion:
         except Exception as e:
             raise MyException(e,sys)
         
-
+    # bringing the data from mongoDB.
     def export_data_into_feature_store(self)->DataFrame:
         """
         Method Name :   export_data_into_feature_store
@@ -73,6 +73,7 @@ class DataIngestion:
         except Exception as e:
             raise MyException(e, sys) from e
 
+    # this does the real work. calls the above functions (connect with mongoDB and split train and test and then store it at a particular location)
     def initiate_data_ingestion(self) ->DataIngestionArtifact:
         """
         Method Name :   initiate_data_ingestion
